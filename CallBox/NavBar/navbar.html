@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- For this page I decided to go with a vertical navbar because it is easier to make responsive if I decided to do that in the future, 
+    and because it was easier to implement a dropdown for the options this way. I opted for a soft fade-in and fade-out effect on hover, as 
+    I think it is aesthetically pleasing. I decided to add an arrow next to the Inventory option for two reasons: first, because it signals 
+    to the user that there is a dropdown unlike the other options, and second, because when it flips when the dropdown is expanded it provides
+    additional feedback to the user. -->
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <a href="/">
+                    <h2>HOME</h2>
+                </a>
+            </li>
+            <li>
+                <div id="inventory">
+                    <h2>INVENTORY</h2>
+                    <img
+                        src="/CallBox/_images/down-arrow-vector.svg"
+                        alt="Inventory Arrow"
+                        class="arrow"
+                        id="inventory-arrow"
+                    />
+                </div>
+                <ul id="sub-inventory">
+                    <li>
+                        <a href="/new">
+                            <h2>NEW</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/used">
+                            <h2>USED</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cars">
+                            <h2>CARS</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/trucks">
+                            <h2>TRUCKS</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/suvs">
+                            <h2>SUV'S</h2>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/about">
+                    <h2>ABOUT</h2>
+                </a>
+            </li>
+            <li>
+                <a href="/contact">
+                    <h2>CONTACT</h2>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        let inventoryExpanded = false;
+        
+        const toggleInventory = () => {
+            inventoryExpanded = !inventoryExpanded;
+            const arrow = document.getElementById('inventory-arrow');
+            const subInventory = document.getElementById('sub-inventory');
+            arrow.style.transform = inventoryExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+            subInventory.style.maxHeight = inventoryExpanded ? '1000px' : '0px';
+        };
+
+        const inventoryButton = document.getElementById('inventory');
+        inventoryButton.addEventListener('click', toggleInventory);
+        
+    </script>
+</body>
+</html>

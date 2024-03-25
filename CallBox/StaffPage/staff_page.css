@@ -1,0 +1,99 @@
+:root {
+    --dark-blue-grey: #4e6395;
+}
+
+body {
+    font-family: Garamond, Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+h2 {
+    color: var(--dark-blue-grey);
+}
+
+h2, h1 {
+    text-align: center;
+}
+
+h3, p {
+    margin-left: 1rem;
+}
+
+header {
+    background-image: url("/CallBox/_images/tree-and-sky-banner.jpeg");
+    background-size: contain;
+    height: 20rem;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.department-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.profiles-grouping {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.phone-display {
+    display: flex;
+    align-items: center;
+}
+
+.phone-icon {
+    max-width: 20px;
+    max-height: 20px;
+    margin-left: 0.5rem;
+}
+
+.employee-profile {
+    background-size: 400px;
+    width: 400px;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 6px;
+    box-shadow: 0px 4px 5px gray;
+    position: relative;
+}
+
+.summary {
+    background-color: var(--dark-blue-grey);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    border-radius: 6px;
+    mask: linear-gradient(#fff 0 0) left/var(--slide, 0%) 100% no-repeat;
+    transition: 0.5s all;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.summary:hover {
+    --slide: 100%
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}

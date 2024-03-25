@@ -1,0 +1,111 @@
+:root {
+    --dark-blue: #31394d
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family:'Franklin Gothic Medium', Arial, sans-serif;
+    font-stretch: expanded;
+}
+
+main {
+    width: 940px;
+    height: 385px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.color-overlay {
+    width: 1400px;
+    height: 1000px;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: 380px;
+    left: -50px;
+    rotate: 75deg;
+    z-index: 10;
+}
+
+.title-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: xxx-large;
+    margin-left: 3rem;
+}
+
+#cadillac-logo {
+    height: 100px;
+    width: 150px;
+    margin-right: 3rem;
+}
+
+#cadillac-image {
+    position: absolute;
+    height: 250px;
+    bottom: 10px;
+    left: -20px;
+    z-index: 11;
+}
+
+.dark-text {
+    color: var(--dark-blue);
+}
+
+#text-box-dark {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+
+#text-box-dark > h2:first-of-type {
+    margin-top: 0;
+}
+
+#text-box-dark > h2:nth-of-type(2) {
+    height: fit-content;
+    margin: 10px 0px;
+    text-align: justify;
+    display: flex;
+    align-items: baseline;
+}
+
+#text-box-dark > span:first-of-type {
+    position: absolute;
+    top: 27px;
+}
+
+#text-box-dark > h2 > span {
+    margin-right: 0.5rem;
+    font-size: medium;
+}
+
+#text-box-light {
+    color: white;
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    right: 50px;
+}
+
+#text-box-light > h2:first-of-type {
+    margin-bottom: 0px;
+}
+
+#text-box-light > h2 > span {
+    font-size: medium;
+    margin-left: 0.5rem;
+}
